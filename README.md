@@ -11,3 +11,16 @@ This repository is supposed to be in:
 /Users/lucian/Library/Application Support/Sublime Text 3/Packages/User
 ```
 
+Use these settings without overriding your entire User folder:
+
+```shell
+cd "/Users/lucian/Library/Application Support/Sublime Text 3/Packages/"
+git clone git@github.com:dlucian/sublime-config.git
+cd User
+ln -s ../sublime-config/Preferences.sublime-settings
+ln -s ../sublime-config/php-unittest.sublime-snippet
+# Start Sublime Text & Enjoy
+```
+
+This way you can only use whatever settings, files or snippets you want,
+without loosing everything in your `User` folder. 
