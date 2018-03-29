@@ -24,3 +24,21 @@ ln -s ../sublime-config/php-unittest.sublime-snippet
 
 This way you can only use whatever settings, files or snippets you want,
 without loosing everything in your `User` folder. 
+
+## Set MySQL Mode to be less strict
+
+```shell
+nano /usr/local/etc/my.cnf
+```
+
+Add this to the end of file, under the `[mysqld]` line:
+
+```ini
+sql_mode = "STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION"
+```
+
+Restart MySQL
+
+```shell
+brew services restart mysql
+```
