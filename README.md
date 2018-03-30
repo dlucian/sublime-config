@@ -42,3 +42,20 @@ Restart MySQL
 ```shell
 brew services restart mysql
 ```
+
+## Set per-project settings in Sublime
+
+```
+{
+	"folders":
+	[
+		{
+			"path": "."
+		}
+	],
+	"settings":
+	{
+        "trim_trailing_white_space_on_save": true
+	}
+}
+```
